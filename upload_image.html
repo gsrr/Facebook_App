@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <script>
+        var FB;
+        function myFacebookLogin() {
+          FB.login(function(){
+              // Note: The call will only work if you accept the permission request
+              //FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+              
+              FB.api(
+                    "/v2.5/960793297302151/photos?fields=link,name,comments",
+                    function (response) {
+                        console.log(response);
+                      if (response && !response.error) {
+                        /* handle the result */
+                      }
+                    }
+                );
+                
+                var imgURL = "http://www.planwallpaper.com/static/images/image5_170127819.jpg";
+                FB.api(
+                    "/v2.5/960793297302151/photos", "post", {message:'photo description', url:imgURL},
+                    function (response) {
+                        console.log(response);
+                      if (response && !response.error) {
+                        /* handle the result */
+                      }
+                    }
+                );
+            }, {scope: 'publish_actions'});
+            
+            
+        }
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '846091538840474',
+          xfbml      : true,
+          version    : 'v2.5' 
+        });
+       
+        
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  <button onclick="myFacebookLogin()">Login with Facebook</button>
+</div>
+    </body>
+    
+</html>
