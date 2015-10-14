@@ -2,7 +2,7 @@ from facepy import GraphAPI
 
 # Initialize the Graph API with a valid access token (optional,
 # but will allow you to do all sorts of fun stuff).
-oauth_access_token = "CAAMBhAmeu5oBAK9n7bhbwZBpjHwWIQZAQ9hPL8KzhKS2iqG8XZC2YoEiAM5cj7yzPITxA7RHZAEF0UkZBVruzYgzyh60BxQl0PhlgH0iY2oyrp0itwFjROavmgHkTiFZBwQapZB7vRv2I1OfsvJ84GWGbhvMPe3h6axNAKcEiVjYZC5SRvuZAmyV6XYBFjrDH8yLsMLWeaZBZCDBVSKfQj7e4tC"
+oauth_access_token = "CAACEdEose0cBALwZBiv5QymZB3XO3UwyTHv55lYNItEnkpB0ZALRsZCkPNPMs9hqf8jaL8AsQOnEnDljKFThmD3BHyvJcN4B1uqZAZA46KS2occPPMTHNkZCGxTpiuhVZChvJuT9rsmJ9P2R1yc5aIFxHO7DSnGvHRbP9x0JA0GlifnmwAY6Yh29jVExma5K2XOZAD9jjDOZApJAZDZD"
 graph = GraphAPI(oauth_access_token)
 
 # Get my latest posts
